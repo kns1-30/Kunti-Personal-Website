@@ -1,0 +1,146 @@
+.sidebar {
+  background-color: $color-primary;
+  grid-column: sidebar-start/sidebar-end;
+  grid-row: 1/-1;
+  display: flex;
+  justify-content: center;
+  z-index: 0;
+  // transition: all 0.3s;
+  // transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+  @media only screen and (max-width: $bp-large) {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    display: block;
+   // align-items: center;
+   // justify-content: flex-end;
+  }
+}
+
+.sidebar-toggleshow {
+
+  width: 20vw;
+
+  @media only screen and (max-width:$bp-large){
+  width: 100vw;
+  height: 100vh;
+
+  }
+}
+
+.disappear {
+  display: none;
+}
+.nav,
+.nav-list {
+  flex-direction: column;
+  //z-index: 5;
+}
+
+.nav-list {
+  display: none;
+}
+.nav-list {
+  // flex-direction: column;
+  //justify-content: center;
+  font-family: $font-serif;
+  font-size: 3rem;
+  list-style: none;
+  margin-top: 10rem;
+  width: 100%;
+
+  @media only screen and (max-width:$bp-large){
+    margin-top: 2rem;
+    margin: auto;
+   // margin-left:2rem;
+    //margin-left: auto;
+    //align-self: flex-start;
+    }
+
+
+}
+
+.nav-toggleshow {
+  display: flex;
+  position: fixed;
+  width: 20vw;
+
+
+  @media only screen and (max-width:$bp-large){
+    position: relative;
+    //text-align: center;
+    }
+}
+
+.nav-link {
+  text-decoration: none;
+  padding: 1.5rem 1rem;
+  color: $color-grey-dark-1;
+  display: inline;
+  margin: 0 0.5rem;
+  // transform: translate(90deg);
+  padding-left: 2vw;
+  //transform: scaleY(0);
+  transition: transform 0.5s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
+    //delay wait
+    background-color 0.1s;
+  border-bottom: 0.5px solid currentColor;
+    &:first-child{
+      margin-top:2rem;
+    }
+  &:hover {
+    background-color: $color-git;
+    border: 1px solid currentColor;
+    border-radius: 5%;
+    transform: scaleY(1.1);
+  }
+
+  &-end{
+    justify-self: end;
+  }
+}
+.nav-btn {
+  z-index: 1;
+  border: none;
+  color: $color-git;
+  background-color: $color-primary;
+  border-radius: 0;
+  //width:4.5rem;
+  margin-top: 4rem;
+  position: fixed;
+
+  cursor: pointer;
+  //border: 1px solid currentColor;
+  transition: transform 0.5s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
+  //delay wait
+  background-color 0.1s;
+
+  @media only screen and (max-width:$bp-large){
+    position: relative;
+
+    }
+
+  .fa-4x{
+  @media only screen and (max-width:$bp-large){
+    font-size: 2em;
+
+    }
+  }
+
+  @media only screen and (max-width:$bp-large){
+    margin: 2rem  0rem 2rem 2rem;;
+    //margin-left:2rem;
+    //margin-left: auto;
+    //align-self: flex-start;
+    }
+
+
+  &:hover{
+    transform: scaleY(1.2);
+  }
+}
+
+
+.sidebar-icon{
+  margin-right:1rem;
+  font-size: 2rem;;
+}

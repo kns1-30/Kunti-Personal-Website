@@ -1,0 +1,23 @@
+.experience{
+//  background-color: $color-grey-light-1;
+  grid-column: center-start/center-end;
+
+  @media only screen and (max-width:$bp-large){
+    grid-row: span 2;
+}
+
+  &-1{
+background-color: $color-developer;
+margin-top:2rem;
+padding: 3rem;
+border-radius: 2%;
+  }
+
+  &-2{
+    background-color: $color-cloud;
+    margin-top:3rem;
+    padding: 3rem;
+    border-radius: 2%;
+      }
+
+}

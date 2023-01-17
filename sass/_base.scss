@@ -1,0 +1,56 @@
+*,
+*::after,
+*::before{
+  margin:0;
+  padding:0;
+  box-sizing: inherit;
+}
+
+
+
+html{
+  box-sizing: border-box;
+  font-size: 62.5%;
+  @media only screen and (max-width:$bp-largest){
+      font-size: 50%;
+  }
+
+  @media only screen and (max-width:$bp-large){
+    font-size: 40%;
+}
+@media only screen and (max-width:$bp-medium){
+  font-size: 35%;
+}
+@media only screen and (max-width:$bp-small){
+  font-size: 30%;
+}
+
+}
+
+body{
+  font-family: $font-primary;
+  color:$color-grey-dark-1;
+  font-weight: 300;
+  font-size:$default-font-size;
+  line-height: 1.6;
+  //background-color: $color-primary-light;
+}
+
+.container{
+  display:grid;
+
+  grid-template-rows: max-content repeat(6, min-content);
+  grid-template-columns: [sidebar-start] 10rem [sidebar-end full-start] minmax(6rem,1fr) [center-start] repeat(8,[col-start] minmax(min-content,18rem) [col-end]) [center-end] minmax(6rem,1fr) [full-end];
+
+
+  @media only screen and (max-width:$bp-large){
+    grid-template-rows: 10rem max-content min-content 40vw ;//repeat(4,  min-content)  ;
+    grid-template-columns: [full-start] minmax(6rem,1fr) [center-start] repeat(8,[col-start] minmax(min-content,14rem) [col-end]) [center-end] minmax(6rem,1fr) [full-end];
+  }
+
+  @media only screen and (max-width:$bp-medium){
+    grid-template-rows: 10rem  max-content ;//min-content min-content min-content repeat(3,  min-content)  ; would be done automaticaaly
+
+  }
+
+}

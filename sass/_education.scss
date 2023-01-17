@@ -1,0 +1,75 @@
+.education{
+  //background-color: $color-grey-light-1;
+  grid-column: center-start/center-end;
+
+
+  margin:7rem 0;
+
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+
+  @media only screen and (max-width:$bp-medium){
+    grid-row: span 2;
+    grid-template-columns: 1fr;
+ }
+
+  grid-gap:3rem;
+
+  &-content{
+    padding: 3rem;
+  }
+
+  &-certification{
+    padding: 3rem;
+
+
+    &-block{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    justify-items: start;
+    grid-row-gap: 3rem;
+    & > *{
+      margin:0 1rem;
+    }
+    }
+  }
+}
+
+
+.courses{
+
+}
+
+
+.course{
+
+  &-item{
+    list-style:none;
+    //float: left;
+  }
+
+  &-link:link,
+  &-link:visited{
+
+    font-size: $default-font-size;
+   // border-bottom: 2px solid $color-grey-dark-1;
+
+    color:black;
+    text-decoration: none;
+    font-family: $font-serif;
+    padding:0.5rem;
+   // text-align: center;
+
+    display: block;
+    transition: all 0.2s;
+
+  }
+
+  &-link:hover,
+  &-link:active{
+    background-color: rgba(black, 0.05);
+    transform: translateX(1rem)
+
+  }
+}

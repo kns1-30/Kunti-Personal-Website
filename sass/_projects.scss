@@ -53,8 +53,8 @@
       auto-fit,
       minmax(50rem, 1fr)
     );
-  grid-template-rows: 40vh repeat(6, min-content);
-  grid-row-gap: 4rem;
+  grid-template-rows: minmax(max-content,50vh) repeat(6, min-content);
+  //grid-row-gap: 4rem;
   //grid-column-gap: 2rem ;
   padding-right: 2rem;
 
@@ -64,7 +64,7 @@
   @media only screen and (max-width: $bp-large) {
    // padding: 0 8rem;
     grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
-    grid-template-rows: 10rem max-content repeat(4, min-content);
+    grid-template-rows: 10rem minmax(max-content,50vh) repeat(4, min-content);
     padding-right: 0rem;
   }
 
@@ -75,7 +75,7 @@
     align-items: center;
     padding: 0;
     margin: 0;
-    background-color: $color-primary-dark-1;
+    background-color: $color-header;
     justify-content: center;
 
     @media only screen and (max-width: $bp-large) {
@@ -84,6 +84,8 @@
 
     &-image {
       margin-left: 3rem;
+      width:30%;
+      //height:20%;
     }
 
 }

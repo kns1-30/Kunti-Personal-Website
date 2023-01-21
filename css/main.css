@@ -191,7 +191,7 @@ body {
 }
 
 .margin-top-med {
-  margin-top: 4rem;
+  margin-top: 4rem !important;
 }
 
 .margin-top-small {
@@ -426,17 +426,16 @@ body {
 .projects-page {
   display: grid;
   grid-template-columns: [sidebar-start] 10rem [sidebar-end] repeat(auto-fit, minmax(50rem, 1fr));
-  grid-template-rows: 40vh repeat(6, -webkit-min-content);
-  grid-template-rows: 40vh repeat(6, min-content);
-  grid-row-gap: 4rem;
+  grid-template-rows: minmax(-webkit-max-content, 50vh) repeat(6, -webkit-min-content);
+  grid-template-rows: minmax(max-content, 50vh) repeat(6, min-content);
   padding-right: 2rem;
   background-color: #f2f2f7;
 }
 @media only screen and (max-width: 62.5em) {
   .projects-page {
     grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
-    grid-template-rows: 10rem -webkit-max-content repeat(4, -webkit-min-content);
-    grid-template-rows: 10rem max-content repeat(4, min-content);
+    grid-template-rows: 10rem minmax(-webkit-max-content, 50vh) repeat(4, -webkit-min-content);
+    grid-template-rows: 10rem minmax(max-content, 50vh) repeat(4, min-content);
     padding-right: 0rem;
   }
 }
@@ -447,7 +446,7 @@ body {
   align-items: center;
   padding: 0;
   margin: 0;
-  background-color: #b3b8c5;
+  background-color: #D3E0DC;
   justify-content: center;
 }
 @media only screen and (max-width: 62.5em) {
@@ -457,6 +456,7 @@ body {
 }
 .projects-heading-image {
   margin-left: 3rem;
+  width: 30%;
 }
 
 .skills {

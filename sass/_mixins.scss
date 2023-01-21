@@ -23,8 +23,10 @@
 }
 
 @mixin hover-border{
-  border: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
   border-radius: 0;
-  //border-right:2px solid currentColor;
+  transform: translateY(-0.7rem);
+  //box-shadow: 0.5rem 1rem 2rem rgba(0,0,0,0.4) ;
+ // border:2px solid currentColor;
 
 }

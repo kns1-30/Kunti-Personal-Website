@@ -53,11 +53,13 @@
       auto-fit,
       minmax(50rem, 1fr)
     );
-  grid-template-rows: 40vh repeat(4, min-content);
+  grid-template-rows: 40vh repeat(6, min-content);
   grid-row-gap: 4rem;
-  padding-right: 4rem;
+  //grid-column-gap: 2rem ;
+  padding-right: 2rem;
 
   background-color: $color-grey-light-1;
+
 
   @media only screen and (max-width: $bp-large) {
    // padding: 0 8rem;

@@ -9,12 +9,13 @@ $color-primary-background: #eef1ff;;
 $color-primary-light: #f2f2f7;
 $color-primary: #e3fff8;//97D2EC;//#EBC7E8; darker #A8D1D1
 $color-primary-dark: #D3CEDF;
-
+$color-header: #D3E0DC;;
+$color-header-dark: #8DCBE6;;
 $color-hello:#86C8BC;
-$color-name :#FFB9B9 ;
+$color-name :#fcd7d4;
 $color-cloud :#E8F3D6;
 $color-and :#BA94D1 ;
-$color-software :#FEBE8C ;
+$color-software :#fbd8bb ;
 $color-developer :#FFF6BD;
 $color-git: #AAC4FF;
 $color-secondary-light:#eef1ff ;
@@ -22,7 +23,7 @@ $color-secondary:#eef1ff;
 $color-secondary-dark: #eef1ff;
 
 $color-button: rgb(86, 191, 86);
-$color-icon:#FCC5C0;
+$color-icon:#facfcb;
 $color-grey-light-1: #f2f2f7;
 $color-grey-light-2: #aaa;
 
@@ -39,7 +40,7 @@ $box-shadow : 0 2rem 3rem rgba($color-primary,0.8);
 // FONT VARIABLES
 $font-primary:   'Open Sans', sans-serif;
 $font-serif: 'Bellota', cursive;
-
+$font-italics :'Bellota', cursive;
 
 $default-font-size: 1.75rem;
 
@@ -55,7 +56,7 @@ $bp-medium:50em;
 $bp-small: 37.5em;
 //600
 
-
+$bp-smallest: 30em;
 
 
 // $color-primary-dark: #eef1ff;

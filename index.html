@@ -30,55 +30,140 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> -->
     <!-- CSS file -->
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="../css/main.css"
+    />
   </head>
 
   <body>
     <div class="container">
       <div class="sidebar">
         <button class="nav-btn" id="navigation">
-          <i class="fa-solid fa-bars fa-4x"></i>
+          <i class="fa-solid fa-bars fa-3x"></i>
         </button>
 
         <nav class="nav-list">
-          <a class="nav-link" href="index.html"><i class="sidebar-icon fa-solid fa-home"></i>Home</a>
-          <a class="nav-link" href="#aboutme"><i class="sidebar-icon fa-solid fa-circle-info"></i> About Me</a>
-          <a class="nav-link" href="#experience"><i class="sidebar-icon fa-solid fa-briefcase"></i> Experience</a>
-          <a class="nav-link" href="projects.html"><i class="sidebar-icon fa-solid fa-terminal"></i> Projects</a>
-          <a class="nav-link" href="#skills"><i class="sidebar-icon fa-solid fa-code"></i> Skills</a>
-          <a class="nav-link" href="#education"><i class="sidebar-icon fa-solid fa-graduation-cap"></i> Education</a>
-          <a class="nav-link nav-link-end" href="#contact"><i class="sidebar-icon fa-sharp fa-solid fa-envelope fa-sm"></i> Contact Me</a>
+          <a class="nav-link" href="index.html"
+            ><i class="sidebar-icon fa-solid fa-home"></i>Home</a
+          >
+          <a class="nav-link" href="#aboutme"
+            ><i class="sidebar-icon fa-solid fa-circle-info"></i> About Me</a
+          >
+          <a class="nav-link" href="#experience"
+            ><i class="sidebar-icon fa-solid fa-briefcase"></i> Experience</a
+          >
+          <a class="nav-link" href="projects.html"
+            ><i class="sidebar-icon fa-solid fa-terminal"></i> Projects</a
+          >
+          <a class="nav-link" href="#skills"
+            ><i class="sidebar-icon fa-solid fa-code"></i> Skills</a
+          >
+          <a class="nav-link" href="#education"
+            ><i class="sidebar-icon fa-solid fa-graduation-cap"></i>
+            Education</a
+          >
+          <a class="nav-link nav-link-end" href="#contact"
+            ><i class="sidebar-icon fa-sharp fa-solid fa-envelope fa-sm"></i>
+            Contact Me</a
+          >
         </nav>
       </div>
 
       <div class="header">
-        <div id="root"></div>
-        <div class="header-text-hello">Hello</div>
-        <div class="header-text-name">I'm Kunti</div>
-        <div class="header-text-title-software">
-          Software and Cloud Developer
+                <div class="header-intro">
+          <h1 class="header-intro-heading">
+            Hi, I'm
+            <div class="header-intro-italics">< Kunti Sandanshi ></div>
+            <br />
+            and I'm a
+            <div class="header-intro-italics">< Full Stack Developer ></div>
+            <br />
+          </h1>
+          <span class="horizontal-line"></span>
+          <div class="header-social">
+            <div class="header-social-div">
+              <a class="header-link" href="https://github.com/kns1-30/"
+                ><i class="fa-brands fa-github"></i>
+                Github
+              </a>
+            </div>
+            <div class="header-social-div">
+              <a
+                class="header-link"
+                href="https://www.linkedin.com/in/kunti-sandanshi/"
+                ><i class="header-icon fa-brands fa-linkedin"></i>LinkedIn</a
+              >
+            </div>
+            <div class="header-social-div">
+              <a class="header-link" href="mailto:sandanshikunti@gmail.com"
+                ><i class="header-icon fa-sharp fa-solid fa-envelope fa-sm"></i
+                >Gmail</a
+              >
+            </div>
+          </div>
         </div>
-        <!-- <div class="header-text-title-cloud">
-          Cloud
-        </div>
-        <div class="header-text-developer">Developer</div>
-        <div class="header-text-and">and</div> -->
 
-        <div class="header-filler-1">
-          <!-- &#128075; -->
+        <div class="header-about">
+          <div class="header-about-section1">
+            <!-- <h2 class="header-about-italics">
+              About Me <i class="fa-solid fa-circle-info"></i>
+            </h2> -->
+            <h3 class="header-about-italics">
+              Intern at A&E Engineering, and,<br>Master's Student of Computer Science at
+              UGA
+            </h3>
+            <p class="header-about-paragraph">
+              to utilize my technical and problem-solving skills.
+              <br />
+
+              Passionate about software development and cloud computing. A fast
+              learner motivated to learn from senior developers.
+              <br />
+              Strong work ethic, and ability to work under pressure by being
+              adaptive. <br />
+              A team player, and hard worker, confident
+              <br />
+              <i class="fa-sharp fa-solid fa-star-of-life fa-2xs"></i>An Oracle
+              Certified Java Professional Developer<br />
+              <i class="fa-sharp fa-solid fa-star-of-life fa-2xs"></i>
+              Always Eager to learn new technologies<br />
+              <i class="fa-sharp fa-solid fa-star-of-life fa-2xs"></i>
+              On route to become certified as AWS Solutions Architect
+            </p>
+
+            <span class="horizontal-line"></span>
+          </div>
+
+          <div class="header-social id="contact">
+            <div class="header-social-div">
+              <a class="header-link" href="#"
+                ><i class="fa-solid fa-cloud-arrow-down"></i> Resume</a
+              >
+            </div>
+
+            <div class="header-social-div">
+              <a class="header-link" href="#"
+                ><i class="fa-solid fa-cloud-arrow-down"></i> CV</a
+              >
+            </div>
+          </div>
         </div>
-        <div class="header-filler-2">
-          <!-- <i class="fa-solid fa-cloud fa-sm"></i> -->
-        </div>
-        <div class="header-filler-3"></div>
-        <div class="header-filler-4"></div>
-        <div class="header-git">
+
+        <!-- <div class="header-git">
           <a class="header-link" href="#"
             ><i class="fa-brands fa-github"></i>
             Github
           </a>
         </div>
+
+
         <div class="header-linkedin">
           <a
             class="header-link"
@@ -97,7 +182,7 @@
           <a class="header-link" href="#"
             ><i class="fa-solid fa-cloud-arrow-down"></i> Resume</a
           >
-        </div>
+        </div> -->
       </div>
 
       <div class="about" id="aboutme">
@@ -467,7 +552,7 @@
               <span class="fa fa-star checked"></span>
               <span class="fa fa-star checked"></span>
               <span class="fa fa-star checked"></span>
-              <span class="fa fa-star"></span>
+              <span class="fa fa-star checked"></span>
             </div>
           </div>
 
@@ -523,6 +608,34 @@
               <span class="fa fa-star checked"></span>
               <span class="fa fa-star checked"></span>
               <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+            </div>
+          </div>
+
+          <div class="skill">
+            <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+            <i class="icon fa-solid fa-c fa-3x"></i>
+            <div class="skill-body">
+              <h4 class="heading-4">C#</h4>
+              <p>1+ years</p>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+            </div>
+          </div>
+
+          <div class="skill">
+            <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+            <i class="icon fa-brands fa-microsoft fa-3x"></i>
+            <div class="skill-body">
+              <h4 class="heading-4">DotNet</h4>
+              <p>1+ years</p>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
               <span class="fa fa-star"></span>
             </div>
           </div>
@@ -644,7 +757,7 @@
             <i class="icon fa-solid fa-code fa-3x"></i>
             <div class="skill-body">
               <h4 class="heading-4">IDE's</h4>
-              <p>IntelliJ, Eclipse, VSCode</p>
+              <p>IntelliJ, Eclipse, VSCode, Visual Studio</p>
               <span class="fa fa-star checked"></span>
               <span class="fa fa-star checked"></span>
               <span class="fa fa-star checked"></span>
@@ -747,31 +860,31 @@
       <footer class="footer">
         <ul class="footer-nav">
           <li class="footer-nav-item">
-            <a href="" class="footer-nav-link">About Me</a>
+            <a href="#about" class="footer-nav-link">About Me</a>
           </li>
           <li class="footer-nav-item">
             <a href="" class="footer-nav-link">Experience</a>
           </li>
           <li class="footer-nav-item">
-            <a href="" class="footer-nav-link">Projects</a>
+            <a href="projects.html" class="footer-nav-link">Projects</a>
           </li>
           <li class="footer-nav-item">
-            <a href="" class="footer-nav-link">Skills</a>
+            <a href="#skills" class="footer-nav-link">Skills</a>
           </li>
           <li class="footer-nav-item">
-            <a href="" class="footer-nav-link">Education</a>
+            <a href="#education" class="footer-nav-link">Education</a>
           </li>
           <li class="footer-nav-item">
-            <a href="" class="footer-nav-link">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/kunti-sandanshi/" class="footer-nav-link">LinkedIn</a>
           </li>
           <li class="footer-nav-item">
-            <a href="" class="footer-nav-link">GitHub</a>
+            <a href="https://github.com/kns1-30/" class="footer-nav-link">GitHub</a>
           </li>
           <li class="footer-nav-item">
             <a href="" class="footer-nav-link">Resume/CV</a>
           </li>
           <li class="footer-nav-item">
-            <a href="" class="footer-nav-link">Gmail</a>
+            <a href="mailto:sandanshikunti@gmail.com" class="footer-nav-link">Gmail</a>
           </li>
         </ul>
 
@@ -781,9 +894,14 @@
 
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-
-
-    <script src="index.js" charset="utf-8"></script>
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
 
     <!-- Bootstrap -->
     <script
@@ -796,5 +914,7 @@
       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
       crossorigin="anonymous"
     ></script>
+
+    <script src="../src/index.js" charset="utf-8"></script>
   </body>
 </html>

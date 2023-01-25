@@ -1,5 +1,5 @@
 .footer{
-  background-color: $color-grey-light-1;
+  background-color: $color-header;
   grid-column: full-start/full-end;
   padding:8rem;
   }
@@ -13,7 +13,7 @@
       &-link:link,
       &-link:visited{
 
-        font-size: $default-font-size;
+        font-size: 2rem;
         border-bottom: 2px solid $color-grey-dark-1;
 
         color:black;
@@ -21,7 +21,7 @@
         font-family: $font-serif;
         padding:1.5rem;
         text-align: center;
-        text-transform: uppercase;
+        //text-transform: uppercase;
         display: block;
         transition: all 0.2s;
 

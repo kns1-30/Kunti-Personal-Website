@@ -16,17 +16,17 @@ html{
   }
 
   @media only screen and (max-width:$bp-large){
-    font-size: 45%;
+    font-size: 50%;
 }
 @media only screen and (max-width:$bp-medium){
-  font-size: 40%;
+  font-size: 48%;
 }
-@media only screen and (max-width:$bp-small){
-  font-size: 35%;
-}
+// @media only screen and (max-width:$bp-small){
+//   font-size: 35%;
+// }
 
 @media only screen and (max-width:$bp-smallest){
-  font-size: 30%;
+  font-size: 45%;
 }
 
 }

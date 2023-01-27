@@ -1,16 +1,15 @@
 .btn-link {
   text-decoration: none;
   font-family: "Bellota", cursive;
-  color: white;
-  background-color: rgb(86, 191, 86);
-  padding: 3rem;
   border-radius: 20%;
-}
-.btn-link:hover {
-  border-radius: 0;
+  padding: 3rem;
   background-color: #e3fff8;
   color: #3a4154;
   border: 2px solid currentColor;
+  transition: all 0.3s;
+}
+.btn-link:hover, .btn-link:active {
+  border-radius: 0%;
 }
 
 .heading-1 {
@@ -102,16 +101,24 @@ body {
 }
 @media only screen and (max-width: 62.5em) {
   .container {
-    grid-template-rows: 8rem minmax(-webkit-max-content, 90vh) -webkit-min-content 40vw;
-    grid-template-rows: 8rem minmax(max-content, 90vh) min-content 40vw;
+    grid-template-rows: 8rem minmax(-webkit-min-content, 90vh) -webkit-min-content 40vw;
+    grid-template-rows: 8rem minmax(min-content, 90vh) min-content 40vw;
     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   }
 }
 @media only screen and (max-width: 50em) {
   .container {
-    grid-template-rows: 8rem minmax(-webkit-max-content, 90vh);
-    grid-template-rows: 8rem minmax(max-content, 90vh);
+    grid-template-rows: 8rem minmax(-webkit-min-content, 90vh);
+    grid-template-rows: 8rem minmax(min-content, 90vh);
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .container {
+    grid-template-rows: 8rem minmax(-webkit-min-content, 90vh);
+    grid-template-rows: 8rem minmax(min-content, 90vh);
+    grid-template-columns: [full-start] minmax(1rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(1rem, 1fr) [full-end];
+    grid-template-columns: [full-start] minmax(1rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(1rem, 1fr) [full-end];
   }
 }
 
@@ -121,10 +128,13 @@ body {
     transform: translateX(-100px);
   }
   80% {
+    opacity: 1;
     transform: translateX(10px);
+    /*  transform: translateX(10px) rotate(180deg); */
   }
   100% {
-    transform: translateX(0px);
+    opacity: 1;
+    transform: translate(0);
   }
 }
 
@@ -134,10 +144,61 @@ body {
     transform: translateX(-100px);
   }
   80% {
+    opacity: 1;
     transform: translateX(10px);
+    /*  transform: translateX(10px) rotate(180deg); */
   }
   100% {
-    transform: translateX(0px);
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@-webkit-keyframes moveinright {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveinright {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@-webkit-keyframes moveinbottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveinbottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
   }
 }
 .horizontal-line {
@@ -215,6 +276,18 @@ body {
   justify-items: center;
   color: #3a4154;
   font-family: "Open Sans", sans-serif;
+}
+.header-name {
+  -webkit-animation: moveinright 2s ease-out 0.25s;
+          animation: moveinright 2s ease-out 0.25s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+.header-title {
+  -webkit-animation: moveinleft 2s ease-out 0.25s;
+          animation: moveinleft 2s ease-out 0.25s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
 }
 .header-social {
   display: flex;
@@ -400,6 +473,11 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
   grid-gap: 4rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .projects-container {
+    grid-template-columns: repeat(auto-fit, 1fr);
+  }
+}
 .projects-btn {
   justify-self: end;
   align-self: center;
@@ -428,8 +506,8 @@ body {
 .projects-page {
   display: grid;
   grid-template-columns: [sidebar-start] 10rem [sidebar-end full-start] repeat(auto-fit, minmax(50rem, 1fr)) [full-end];
-  grid-template-rows: minmax(-webkit-max-content, 40vh) repeat(7, -webkit-min-content);
-  grid-template-rows: minmax(max-content, 40vh) repeat(7, min-content);
+  grid-template-rows: minmax(-webkit-min-content, 40vh) repeat(7, -webkit-min-content);
+  grid-template-rows: minmax(min-content, 40vh) repeat(7, min-content);
   padding-right: 2rem;
   background-color: #f2f2f7;
 }
@@ -586,7 +664,7 @@ body {
 
 .nav-list {
   font-family: "Bellota", cursive;
-  font-size: 3rem;
+  font-size: 2.5rem;
   list-style: none;
   margin-top: 10rem;
   width: 100%;

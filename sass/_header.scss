@@ -20,6 +20,16 @@
     // grid-row: span 2;;
   }
 
+  &-name{
+    animation: moveinright 2s ease-out 0.25s;
+    animation-fill-mode: backwards;
+  }
+
+  &-title{
+    animation: moveinleft 2s ease-out 0.25s;
+    animation-fill-mode: backwards;
+  }
+
   &-social {
     display: flex;
     justify-content: space-evenly;

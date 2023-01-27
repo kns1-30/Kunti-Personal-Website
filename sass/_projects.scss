@@ -7,6 +7,11 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
     grid-gap: 4rem;
+
+    @media only screen and (max-width: $bp-small) {
+      grid-template-columns: repeat(auto-fit,  1fr);
+    }
+
   }
 
   &-btn {
@@ -53,7 +58,7 @@
       auto-fit,
       minmax(50rem, 1fr)
     ) [full-end];
-  grid-template-rows: minmax(max-content,40vh) repeat(7, min-content);
+  grid-template-rows: minmax(min-content,40vh) repeat(7, min-content);
   //grid-row-gap: 4rem;
   //grid-column-gap: 2rem ;
   padding-right: 2rem;

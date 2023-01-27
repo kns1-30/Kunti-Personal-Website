@@ -1,17 +1,19 @@
 .btn-link{
   text-decoration: none;
   font-family: $font-serif;
-  color:white;
-  background-color: $color-button;
+  border-radius:20%;
   padding: 3rem;
-  border-radius: 20%;
-
-  &:hover{
-    border-radius:0;
    // @include hover-border;
     background-color: $color-primary;
     color:$color-grey-dark-1;
     border: 2px solid currentColor;
+    transition: all 0.3s;
+  &:hover,&:active{
+
+  //color:white;
+  //background-color: $color-button;
+
+  border-radius: 0%;
   }
 }
 

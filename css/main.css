@@ -464,7 +464,7 @@ body {
 }
 .about-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  grid-template-columns: repeat(2, minmax(35rem, 1fr));
   grid-gap: 3rem;
 }
 .about-content > * {
@@ -483,7 +483,7 @@ body {
   }
 }
 .about-specialities {
-  grid-column: span 2;
+  grid-column: 1/-1;
   background-color: #e3fff8;
   padding: 3rem;
   border: 1px solid currentColor;

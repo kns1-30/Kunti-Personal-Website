@@ -7,6 +7,11 @@
   border-radius: 2%;
   font-family: $font-primary;
 
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: full-start/full-end;
+
+  }
+
 &-paragraph{
   line-height: 2.25;
 }
@@ -23,11 +28,14 @@
 
   }
   &-points{
-   // grid-column: 2/3;
+
     background-color: $color-cloud;
     padding: 3rem;;
     border:1px solid currentColor;
-    //border:3px solid currentColor;
+    @media only screen and (max-width: $bp-medium) {
+      grid-column:1/-1;
+      border-radius: 2%;
+    }
   }
 
   &-specialities{
@@ -36,11 +44,23 @@
     padding: 3rem;
     border:1px solid currentColor;
     border-radius: 2%;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: 1/-1;
+      border-radius: 2%;
+    }
   }
 
   &-hobbies{
     background-color: $color-name;
     border:1px solid currentColor;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-column:1/-1;
+      border-radius: 2%;
+
+    }
+
   }
 }
 

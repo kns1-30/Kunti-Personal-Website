@@ -111,14 +111,16 @@ body {
   .container {
     grid-template-rows: 8rem minmax(-webkit-min-content, 90vh);
     grid-template-rows: 8rem minmax(min-content, 90vh);
+    grid-template-columns: [full-start] minmax(4rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    grid-template-columns: [full-start] minmax(4rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   }
 }
 @media only screen and (max-width: 37.5em) {
   .container {
     grid-template-rows: 8rem minmax(-webkit-min-content, 90vh);
     grid-template-rows: 8rem minmax(min-content, 90vh);
-    grid-template-columns: [full-start] minmax(1rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(1rem, 1fr) [full-end];
-    grid-template-columns: [full-start] minmax(1rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(1rem, 1fr) [full-end];
+    grid-template-columns: [full-start] minmax(1.5rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(1rem, 1fr) [full-end];
+    grid-template-columns: [full-start] minmax(1.5rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(1rem, 1fr) [full-end];
   }
 }
 
@@ -452,6 +454,11 @@ body {
   border-radius: 2%;
   font-family: "Open Sans", sans-serif;
 }
+@media only screen and (max-width: 50em) {
+  .about {
+    grid-column: full-start/full-end;
+  }
+}
 .about-paragraph {
   line-height: 2.25;
 }
@@ -469,6 +476,12 @@ body {
   padding: 3rem;
   border: 1px solid currentColor;
 }
+@media only screen and (max-width: 50em) {
+  .about-points {
+    grid-column: 1/-1;
+    border-radius: 2%;
+  }
+}
 .about-specialities {
   grid-column: span 2;
   background-color: #e3fff8;
@@ -476,9 +489,21 @@ body {
   border: 1px solid currentColor;
   border-radius: 2%;
 }
+@media only screen and (max-width: 50em) {
+  .about-specialities {
+    grid-column: 1/-1;
+    border-radius: 2%;
+  }
+}
 .about-hobbies {
   background-color: #fcd7d4;
   border: 1px solid currentColor;
+}
+@media only screen and (max-width: 50em) {
+  .about-hobbies {
+    grid-column: 1/-1;
+    border-radius: 2%;
+  }
 }
 
 .projects {
@@ -781,7 +806,6 @@ body {
 
 .experience {
   grid-column: center-start/center-end;
-  margin-top: 8rem;
 }
 @media only screen and (max-width: 62.5em) {
   .experience {

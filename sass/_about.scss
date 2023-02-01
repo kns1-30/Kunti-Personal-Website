@@ -7,7 +7,9 @@
   border-radius: 2%;
   font-family: $font-primary;
 
-
+&-paragraph{
+  line-height: 2.25;
+}
 
   &-content{
     & > *{
@@ -24,14 +26,21 @@
    // grid-column: 2/3;
     background-color: $color-cloud;
     padding: 3rem;;
-    border:3px solid currentColor;
+    border:1px solid currentColor;
+    //border:3px solid currentColor;
   }
 
   &-specialities{
-    //grid-column: 3/4;
+    grid-column: span 2;
     background-color: $color-primary;
     padding: 3rem;
-    border:3px solid currentColor;
+    border:1px solid currentColor;
+    border-radius: 2%;
+  }
+
+  &-hobbies{
+    background-color: $color-name;
+    border:1px solid currentColor;
   }
 }
 
